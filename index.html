@@ -301,7 +301,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3.5rem;display:flex;ali
     <a href="#experience">Work</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <a href="/cdn-cgi/l/email-protection#b1d0d5d0c3c2d9d9c3d0dbc1c4c58688f1d6dcd0d8dd9fd2dedc" class="n-cta">Hire Me</a>
+    <a href="mailto:adarshhrajput79@gmail.com" class="n-cta">Hire Me</a>
   </div>
 </nav>
 
@@ -363,10 +363,10 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3.5rem;display:flex;ali
 <!-- ═══════ ABOUT ═══════ -->
 <div class="sec" id="about">
   <div class="sec-label reveal"><span class="sec-label-num">01</span><div class="sec-label-line"></div><span class="sec-label-txt">About Me</span></div>
-  <div class="sec-h reveal">THE STORY <em>BEHIND THE CODE</em></div>
+  <div class="sec-h reveal">THE STORY<br><em>BEHIND</em> THE CODE</div>
   <div class="about-grid">
     <div class="about-body reveal">
-     <p>Main <strong>Rajgarh district, MP</strong> ke ek chote se gaon se hun. COVID pandemic ke waqt — jab poori duniya ghar pe thi — maine 2021 mein <strong>khud se coding seekhna start kiya</strong>. Koi coaching nahi, koi guide nahi — sirf internet, curiosity, aur ek laptop.<br><br>Aaj main <strong>3+ saalon ke production experience</strong> ke saath fintech platforms aur AI-powered applications build karta hun. IMPETROSYS mein BCTPay jaisi real fintech products pe kaam kiya — RBAC, KYC/KYB, payment gateways sab kuch.<br><br>Abhi <strong>GenAI ki duniya mein dive kar raha hun</strong> — LangChain, Agents, RAG — kyunki AI + Full Stack combination future hai.</p>
+    <p>Main <strong>Rajgarh district, MP</strong> ke ek chote se gaon se hun. COVID pandemic ke waqt — jab poori duniya ghar pe thi — maine 2021 mein <strong>khud se coding seekhna start kiya</strong>. Koi coaching nahi, koi guide nahi — sirf internet, curiosity, aur ek laptop.<br><br>Aaj main <strong>3+ saalon ke production experience</strong> ke saath fintech platforms aur AI-powered applications build karta hun. IMPETROSYS mein BCTPay jaisi real fintech products pe kaam kiya — RBAC, KYC/KYB, payment gateways sab kuch.<br><br>Abhi <strong>GenAI ki duniya mein dive kar raha hun</strong> — LangChain, Agents, RAG — kyunki AI + Full Stack combination future hai.</p>
     </div>
     <div class="about-stack">
       <div class="info-tile reveal"><div class="tile-ico">📍</div><div><div class="tile-label">Location</div><div class="tile-val">Indore, MP</div><div class="tile-sub">From Rajgarh, MP</div></div></div>
@@ -610,7 +610,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3.5rem;display:flex;ali
   <div class="sec-label reveal"><span class="sec-label-num">06</span><div class="sec-label-line"></div><span class="sec-label-txt">Contact</span></div>
   <div class="sec-h reveal">LET'S <em>BUILD</em> SOMETHING</div>
   <div class="contact-grid">
-    <a class="cl reveal" href="/cdn-cgi/l/email-protection#aacbcecbd8d9c2c2d8cbc0dadfde9d93eacdc7cbc3c684c9c5c7"><div class="cl-ico">MAIL</div><div><div class="cl-label">Email</div><div class="cl-val"><span class="__cf_email__" data-cfemail="aacbcecbd8d9c2c2d8cbc0dadfde9d93eacdc7cbc3c684c9c5c7">[email&#160;protected]</span></div></div></a>
+    <a class="cl reveal" href="mailto:adarshhrajput79@gmail.com"><div class="cl-ico">MAIL</div><div><div class="cl-label">Email</div><div class="cl-val">adarshhrajput79@gmail.com</div></div></a>
     <a class="cl reveal" href="tel:+919753536539"><div class="cl-ico">CALL</div><div><div class="cl-label">Phone</div><div class="cl-val">+91-9753536539</div></div></a>
     <a class="cl reveal" href="https://linkedin.com/in/adarsh-rajput-974676204" target="_blank"><div class="cl-ico">LI</div><div><div class="cl-label">LinkedIn</div><div class="cl-val">adarsh-rajput-974676204</div></div></a>
     <a class="cl reveal" href="https://github.com/adarshthakur79" target="_blank"><div class="cl-ico">GH</div><div><div class="cl-label">GitHub</div><div class="cl-val">adarshthakur79</div></div></a>
@@ -622,7 +622,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3.5rem;display:flex;ali
   <div class="f-open"><div class="f-open-dot"></div> Open to new opportunities</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // ── CURSOR ──
 const dot=document.getElementById('c-dot'),ring=document.getElementById('c-ring');
 let mx=0,my=0,rx=0,ry=0;
@@ -635,4 +635,15 @@ document.querySelectorAll('a,button,.pc,.sk,.info-tile,.cl,.metric').forEach(el=
 
 // ── SCROLL REVEAL ──
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.07});
-document.querySelectorAll('.reveal').for
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── NAV HIDE/SHOW ON SCROLL ──
+let lastY=0;
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  document.querySelector('nav').style.transform=y>lastY&&y>200?'translateY(-100%)':'translateY(0)';
+  lastY=y;
+},{passive:true});
+</script>
+</body>
+</html>
